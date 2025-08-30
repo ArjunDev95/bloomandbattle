@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Battle</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background: radial-gradient(circle at center, #0d0d1f, #060612);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(76, 133, 255, 0.4);
+            padding: 50px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 100px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(12, 12, 36, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 10;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav a {
+            color: #4c85ff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 24px;
+            transition: 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00;
+            color: #12121c;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(255, 204, 0, 0.7);
+        }
+
+        /* Header */
+        h1 {
+            font-size: 4em;
+            color: #4c85ff;
+            text-shadow: 2px 2px 20px rgba(76, 133, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #cfcfcf;
+        }
+
+        /* Sections */
+        .section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(12, 12, 36, 0.6);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        .developer {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .developer span {
+            color: #ffcc00;
+            text-shadow: 2px 2px 12px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Portfolio */
+        .update h2 {
+            font-size: 2.8em;
+            color: #ffcc00;
+            text-shadow: 2px 2px 18px rgba(255, 204, 0, 0.9);
+        }
+
+        .update-item {
+            margin-top: 3vw;
+            padding: 2em;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            text-align: center;
+            width: 85%;
+
+            /* Procedural spacing based on content */
+            min-height: fit-content;
+            margin-bottom: calc(1em + 1vh);
+        }
+
+        .update-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 204, 0, 1);
+        }
+
+        .update-title {
+            font-size: 2.2em;
+            color: #4c85ff;
+            font-weight: bold;
+        }
+
+        .update-desc {
+            font-size: 18px;
+            color: #82c9f5;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#developers">Developers</a>
+        <a href="#updates">Updates and releases</a>
+    </nav>
+
+    <div class="glass">
+        <h1>Bloom and Battle</h1>
+        <p>A combination of a few FAMOUS games but with twists</p>
+        <p>Also join my discord at <a href="https://discord.com/channels/1374762668623396914/1374762669248217202">Discord link</a></p>
+
+        <div class="section" id="developers">
+            <h2>About the Developers</h2>
+            <div class="developer"><span>Arjun:</span> The  Lead Programmer</div>
+            <div class="developer"><span>Eshaan:</span> Concept Creator</div>
+            <div class="developer"><span>Reyansh SK:</span> Game Tester</div>
+        </div>
+
+        <div class="section portfolio" id="portfolio">
+            <h2>Updates and releases</h2>
+
+            <div class="update-item">
+                <div class="update-title">Version 1.0</div>
+                <div class="update-desc">This is the first release of Bloom & Battle</div>
+                <div class="update-desc">In this update, the main BASIC things were done</div>
+                <div class="update-desc">If you want exact progress, join my discord from the link above</div>
+                <div class="update-desc">Release date: Soon</div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
